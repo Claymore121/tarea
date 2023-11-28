@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="body">
+    <header>
+        <img src="/FOTO-CAFETERIA-01.jpg" alt="" class="fotocafe">
+        <h1>Cafeteria Tecnologico</h1>
+        <div class="stars2">
+            ★★★★<span style="color: rgba(90, 96, 100, 0.411);">★</span>
+          </div>
+          
+    </header>
+  <div class="review-card">
+    <div class="customer-info">
+      <img src="/UAS_logo.png" alt="Customer Photo" width="50" height="50">
+      <div>
+        <strong>Tortillo98</strong>
+      </div>
+    </div>
+    <div class="stars">
+      ★<span style="color: rgba(90, 96, 100, 0.411);">★★★★</span>
+    </div>
+
+    <div class="review-text">
+      <p>pesimo todo lugar comida y su gnte viva cuen</p>
+    </div>
+  </div>
+
+  <div class="review-card">
+    <div class="customer-info">
+      <img src="/usario.jpg" alt="Customer Photo" width="50" height="50">
+      <div>
+        <strong>Usario12930232</strong>
+      </div>
+    </div>
+    <div class="stars">
+      ★★★★★<span style="color: rgba(90, 96, 100, 0.411);"></span>
+    </div>
+
+    <div class="review-text">
+      <p>todo bien la comida muy rica solo los precios algo caros</p>
+    </div>
+  </div>
+
+  <div class="review-card">
+    <div class="customer-info">
+      <img src="/gato2.jpg" alt="Customer Photo" width="50" height="50">
+      <div>
+        <strong>NoobMaster69</strong>
+      </div>
+    </div>
+    <div class="stars">
+      ★★★★★<span style="color: rgba(90, 96, 100, 0.411);"></span>
+    </div>
+
+    <div class="review-text">
+      <p>La cafetería universitaria deslumbra con su ecléctica amalgama culinaria, cautivando a comensales con su suntuosa variedad gastronómica y ambiente efervescente.</p>
+    </div>
+  </div>
+
+  <div id="opinionOutput" class="review-card" style="display: none;">
+    <div class="customer-info">
+      <img src="/GIGACHAD.jpg" alt="Customer Photo" width="50" height="50">
+      <div>
+        <strong>Aulumno Promedio</strong>
+      </div>
+    </div>
+    <div class="stars">
+      <!-- Puedes personalizar las estrellas según la opinión del usuario -->
+      ★★★★★<span style="color: rgba(90, 96, 100, 0.411);"></span>
+    </div>
+
+    <div class="review-text">
+      <!-- Aquí se mostrará la opinión del usuario -->
+    </div>
+  </div>
+
+  
+  <div class="reseña">
+    <div class="card">
+        <div class="form-container">
+          <p>Tu opinión nos interesa</p>
+          <textarea id="opinionInput" rows="4" placeholder="Escribe tu opinión aquí"></textarea>
+          <button onclick="mostrarOpinion()">Enviar</button>
+        </div>
+        <div id="opinionOutput"></div>
+      </div>
+    
+</div>
+
+    
+<script>
+    // Función para mostrar la opinión del usuario
+    function mostrarOpinion() {
+      var opinionInput = document.getElementById('opinionInput').value;
+      var opinionOutput = document.getElementById('opinionOutput');
+      opinionOutput.style.display = "block";
+      opinionOutput.querySelector('.review-text').innerHTML = "<p>" + opinionInput + "</p>";
+    }
+  </script>
+</body>
+</html>
